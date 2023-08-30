@@ -11,10 +11,10 @@ type SearchBarProps = {
 const SearchBar: React.FC<SearchBarProps> = ({onSearch}) => {
 
   const onChange = (ev: any) => {
-    const {target} = ev.currentTarget;
+    const {currentTarget} = ev;
 
     // TODO: add debiounce
-    onSearch(target.value)
+    onSearch(currentTarget.value)
   }
 
   return <div className="search-bar">
