@@ -1,0 +1,19 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap');
+
+.App {
+  text-align: center;
+  padding-top: 4em;
+  font-family: 'Lato', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-link {
+  color: #61dafb;
+}
