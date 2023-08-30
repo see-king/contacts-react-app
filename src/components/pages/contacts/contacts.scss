@@ -1,0 +1,14 @@
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1em;
+    > div, > button {
+        margin: 0.4em 0;
+    }
+}
+
+
+.buttons {
+    margin: 0.5em 0;
+}

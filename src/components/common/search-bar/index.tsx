@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { TextField, debounce } from "@mui/material";
 import React from "react";
 
 type SearchBarProps = {
@@ -10,11 +10,11 @@ type SearchBarProps = {
 
 const SearchBar: React.FC<SearchBarProps> = ({onSearch}) => {
 
-  const onChange = (ev: any) => {
-    const {currentTarget} = ev;
+  const debouncedSearch = debounce( onSearch, 200 )
 
-    // TODO: add debiounce
-    onSearch(currentTarget.value)
+  const onChange = (ev: any) => {
+    const {target} = ev;
+    debouncedSearch(target.value)
   }
 
   return <div className="search-bar">

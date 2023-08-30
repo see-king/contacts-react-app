@@ -1,0 +1,17 @@
+.notifications{
+    position: fixed;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    z-index: 1000;//show over everything
+
+    max-height: 200px;
+    overflow-y: auto;
+
+    li{
+        padding: none;
+        margin: 0.2em;
+        cursor: pointer;
+    }
+}

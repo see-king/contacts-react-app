@@ -32,3 +32,33 @@
 .App-link {
   color: #61dafb;
 }
+
+[role="dialog"]{
+  .dialog-header{
+    color: gray;
+    font-family: $defaultFont;
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+
+}
+
+
+html {
+  body {
+    .flex{
+      display: flex;
+
+      &.flex-start{
+        justify-content: flex-start;
+      }
+      &.flex-end{
+        justify-content: flex-end;
+      }
+      &.space-between{
+        justify-content: space-between;
+      }
+    }
+  }
+}

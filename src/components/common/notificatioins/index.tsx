@@ -3,6 +3,7 @@ import { uiMessage } from "../../../redux/ui-reducer";
 import { connect } from "react-redux";
 import { ReduxStateType } from "../../../redux/store";
 import { Alert } from "@mui/material";
+import "./notifications.scss";
 
 type Props = {
   messages: uiMessage[]
@@ -10,7 +11,7 @@ type Props = {
 
 const Notifications: React.FC<Props> = ({messages}) => {
   return <ul className="notifications">
-    {messages.map( message => <li className="item"> <Alert severity={message.severity || "error"}>{message.text}</Alert></li> )}
+    {messages.map( message => <li onClick={(ev)=> { (ev.currentTarget as Element )?.remove() } } className="item" key={"message-" + message.message_id}> <Alert severity={message.severity || "error"}>{message.text}</Alert></li> )}
   </ul>;
 };
 

@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# Contacts app test
+A basic demo app that stores contacts in local storage
+
+Allows to add / edit / delete contacts with unique phone number
+
+Stores the data in local storage between page reloads
+
+## Installation 
+`npm install` to install the dependencies
+
+## Configuration
+add a `.env` file with `PORT` value to run on any port:
+``` 
+#.env file:
+
+# Will run on port 3010
+PORT=3010
+
+```
+## Running the app
+`npm start` to run the app in browser
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +30,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) (or another port, if using PORT value in .env file) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.

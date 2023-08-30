@@ -38,6 +38,9 @@ const ContactForm: React.FC<ContactFormProps> = ({contact, onSave}) => {
     onSave(formContact);
   }
 
+  // fall back for
+  if( !contact ) return <>...</>;
+
   return <div className="contact-form">
     <TextField name="fullName" label="Full name" onInput={onChange} value={formContact.fullName}/>
     <TextField name="phone" label="Phone" onInput={onChange} value={formContact.phone}/>
