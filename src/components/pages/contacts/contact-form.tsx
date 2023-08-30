@@ -31,14 +31,15 @@ const ContactForm: React.FC<ContactFormProps> = ({contact, onSave}) => {
   }
 
   const updateNotes = (ev: any ) => {
-
+    const notes = ev.target.value.split("\n");
+    setContact({...formContact, notes } );
   }
 
   const save = () => {
     onSave(formContact);
   }
 
-  // fall back for
+  // fall back for empty contact
   if( !contact ) return <>...</>;
 
   return <div className="contact-form">
@@ -48,7 +49,7 @@ const ContactForm: React.FC<ContactFormProps> = ({contact, onSave}) => {
     <TextField name="age" type="number" inputProps={{ min: 1}} label="Age" onInput={onChange} value={formContact.age}/>
 
     {/* <TextField type="textarea" name="notes" value={formContact.notes.join("\n")} onInput={updateNotes} /> */}
-    <TextField type="textarea" name="notes" value={""} onInput={updateNotes} />
+    <TextField multiline maxRows={5} name="notes" value={formContact?.notes?.join("\n")} onInput={updateNotes} />
 
 
     <Button onClick={save} variant="contained">Save</Button>
